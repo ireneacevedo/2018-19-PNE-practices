@@ -1,5 +1,4 @@
-
-chain = str(input('Enter a sequence:'))
+chain = input('Enter a sequence:')
 chain = chain.upper()
 countA = 0
 countC = 0

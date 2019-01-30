@@ -1,12 +1,10 @@
 with open ('CPLX2.txt','r') as f:
     sequence = f.read().partition('\n')
     seq = sequence[2].replace ('\n','')
-
     countA = 0
     countC = 0
     countT = 0
     countG = 0
-
     for letter in seq:
         if letter == 'A':
             countA += 1

@@ -1,13 +1,15 @@
 
-with open (filename , 'r') as f:
+with open ('dna.txt','w') as f:
+    f.write('AGTGTGTACATGACATGG')
+f.close()
 
-
+with open ('dna.txt','r') as f:
     countA = 0
     countC = 0
     countT = 0
     countG = 0
-    length = len(chain)
-    for letter in chain:
+    length = len(f.read())
+    for letter in f.read():
         if letter == 'A':
             countA += 1
         if letter == 'C':

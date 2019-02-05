@@ -6,14 +6,18 @@ def count_a(seq):
     return counter
 
 #main program
-s = 'ACGTCGAGGTTCACAG'
+s = input('Please enter the sequence: ')
 number_a = count_a(s)
-print('The number of As in the sequence is:', number_a)
+print('The number of As in the sequence is: {}'.format(number_a))
 
 l = len(s)
-print('The lenght of the seq is:',l)
+
+
+print('The lenght of the seq is:{}'.format(l))
 
 #the percentage of As in the sequence
-perc= round(100.0*number_a/l, 1)
-
-print('The percentage of AS in the seq is:',perc,'%')
+if l > 0:
+    perc= round(100.0*number_a/l, 1)
+else:
+    perc = 0
+print('The percentage of AS in the seq is:{}'.format(perc),'%')

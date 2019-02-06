@@ -28,7 +28,8 @@ for i in ls:
     count += 1
     print('\n Sequence {}'.format(count),'\n')
     l = len(i)
-    bases = count_bases(i)  # we call the function
+    bases = count_bases(i) # we call the function
+    print('The length of the sequence is: {}'.format(l), '\n')
     for keys in bases.keys():
         if l > 0:
             percentage = round(100.0*bases[keys] / l, 1)
@@ -36,4 +37,3 @@ for i in ls:
             print(' Percentage: {}'.format(percentage), '%')
         else:
             percentage = 0
-print('The length of the sequence is: {}'.format(l), '\n')

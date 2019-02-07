@@ -6,21 +6,23 @@ class Seq:
         return len(self.strbases)
 
     def complement(self):
-        comp = ''
+        string = ''
         for letter in self.strbases:
             self.strbases = self.strbases.upper()
             if letter == 'A':
-                comp += 'T'
+                string += 'T'
             elif letter == 'C':
-                comp += 'G'
+                string += 'G'
             elif letter == 'G':
-                comp += 'C'
+                string += 'C'
             elif letter == 'T':
-                comp += 'A'
+                string += 'A'
+        comp = Seq(string)
         return comp
 
     def reverse(self):
-        seq_rev = self.strbases[::-1]
+        seq_rev_str = self.strbases[::-1]
+        seq_rev = Seq(seq_rev_str)
         return seq_rev
 
     def count(self, base):
@@ -32,8 +34,6 @@ class Seq:
         self.base = base
         percentage = round(100.0 * self.strbases.count(base) / len(self.strbases), 1)
         return percentage
-
-
 
 
 

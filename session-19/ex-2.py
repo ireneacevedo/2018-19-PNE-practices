@@ -55,13 +55,11 @@ print(r1.status, r1.reason)
 text_json = r1.read().decode("utf-8")
 conn.close()
 
+weather = json.loads(text_json)
 
-data = json.loads(text_json)
+time = weather['time']
 
-# -- Get the data
-time = data['time']
-
-temp0 = data['consolidated_weather'][0]
+temp0 = weather['consolidated_weather'][0]
 description = temp0['weather_state_name']
 temp = temp0['the_temp']
 place = weather['title']

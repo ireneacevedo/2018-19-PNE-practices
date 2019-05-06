@@ -47,7 +47,7 @@ def operation(s, cs):
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((IP, PORT))
-s.listen(MAX_CLIENTS)
+s.listen(MAX_OPEN_REQUEST)
 
 while True:
     print('waiting for connections at : {}, {}'.format(IP, PORT))

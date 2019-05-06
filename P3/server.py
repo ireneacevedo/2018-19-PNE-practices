@@ -1,4 +1,4 @@
-from Seq import Seq
+from seq3 import Seq
 import socket
 
 PORT = 8080
